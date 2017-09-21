@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery.bxslider.js" ></script>
+		<script type="text/javascript" src="js/swiper.min.js" ></script>
+		<style type="text/css">
+			#tab li{
+				width: 194px;
+				height: 141px;
+				padding-top: 40px;
+				cursor: pointer;
+				
+			}
+			.fli{
+				background: #94C309;
+				color: #94c309;
+				
+			}
+			.pic1{
+				background-position: 0 -70px;
+			}
+			.pic2{
+				background-position: -80px 0;
+			}
+			.pic3{
+				background-position: 0 0;
+			}
+			.pic4{
+				background-position: -80px -70px;
+			}
+			.normal{
+				background-color:#E8E8E8;
+			}
+			.pic{
+				width:80px;
+				height: 70px;
+				margin-left: auto;
+				margin-right: auto;
+				background-image: url(img/index18.png);
+			}
+			.colorone{
+				color: #f1f3f5;
+			}
+			.colortwo{
+				color: #94c309;
+			}
+			#tab li:nth-of-type(2) .pic{
+				height: 70px;
+			}
+			#tab li .now{
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+				padding-top: 20px;
+			}
+			.left{
+				position: relative;
+			}
+			
+			#tabCon div:nth-of-type(1),#tabCon div:nth-of-type(2){
+				position:absolute;
+				left: 194px;
+				top: 0;
+				height:362px;
+				width: 576px;
+			}
+			#tabCon div {
+			    display:none;
+			}
+			#tabCon div.fdiv {
+			    display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="head">
+				<div class="box">
+					<h1 class="logo fl">
+						<img src="img/logo.png" alt="陕西阳晨牧业股份有限公司" />
+					</h1>
+					<div class="hb_top">
+						<ul class="clearfix">
+							<li>
+								<a href="#">旗下子公司<i class="top_ico"></i></a>
+								
+							</li>
+							<li>
+								<a href="#">移动端二维码<i class="top_ico"></i></a>
+								
+							</li>
+							<li>
+								<a href="#">企业邮箱<i class="top_ico"></i></a>
+								
+							</li>
+							<li>
+								<a href="#">康硒谷商城<i class="top_ico"></i></a>
+								
+							</li>
+						</ul>
+					</div>
+					<nav>
+						<ul class="clearfix">
+							<li>
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="about/aboutyangchen.html">关于阳晨</a>
+								<div class="layer clearfix">
+									<ul>
+										<li><a href="#">企业简介</a></li>
+										<li><a href="#">产业体系</a></li>
+										<li><a href="#">领导致辞</a></li>
+										<li><a href="#">企业理念</a></li>
+										<li><a href="#">企业团队</a></li>
+										<li><a href="#">企业荣誉</a></li>
+										<li><a href="#">领导关怀</a></li>
+										<li><a href="#">发展历程</a></li>
+										<li><a href="#">联系我们</a></li>
+									</ul>
+									<div class="hide">
+										<img src="img/index8.jpg" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="industry/industry.html">阳晨产业</a>
+								<div class="layer clearfix">
+									<ul>
+										<li><a href="#">饲料加工</a></li>
+										<li><a href="#">畜牧养殖</a></li>
+										<li><a href="#">农业示范园</a></li>
+										<li><a href="#">能源开发</a></li>
+										<li><a href="#">休闲养老</a></li>
+										<li><a href="#">富硒食品</a></li>
+										<li><a href="#">生猪产业联盟</a></li>
+										<li><a href="#">阳晨职业技能培训学校</a></li>
+									</ul>
+									<div class="hide">
+										<img src="img/index13.jpg"  />
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="news/news.html">新闻中心</a>
+								<div class="layer clearfix">
+									<ul>
+										<li><a href="#">公司要闻</a></li>
+										<li><a href="#">行业动态</a></li>
+										<li><a href="#">媒体关注</a></li>
+										
+									</ul>
+									<div class="hide">
+										<img src="img/index22.jpg" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="product/product.html">产品中心</a>
+								<div class="layer clearfix">
+									<ul>
+										<li><a href="#">阳晨种猪</a></li>
+										<li><a href="#">富硒饲料</a></li>
+										<li><a href="#">富硒猪肉</a></li>
+										<li><a href="#">富硒果蔬</a></li>
+										<li><a href="#">富硒特产</a></li>
+										
+									</ul>
+									<div class="hide">
+										<img src="img/index14.jpg" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="cultrue/cultrue.html">企业文化</a>
+								<div class="layer clearfix">
+									<ul>
+										<li><a href="#">宣传视屏</a></li>
+										<li><a href="#">党建专栏</a></li>
+										<li><a href="#">阳晨内刊</a></li>
+										<li><a href="#">公益活动</a></li>
+										<li><a href="#">员工活动</a></li>
+										<li><a href="#">员工风采</a></li>
+										
+									</ul>
+									<div class="hide">
+										<img src="img/index23.jpg" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="resource/resource.html">人力资源</a>
+								<div class="layer clearfix">
+									<ul>
+										<li><a href="#">人才策略</a></li>
+										<li><a href="#">社会招聘</a></li>
+										<li><a href="#">校企合作</a></li>
+										
+									</ul>
+									<div class="hide">
+										<img src="img/peo.jpg"  />
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="fuwu/fuwu.html">服务与营销</a>
+								<div class="layer clearfix">
+									<ul>
+										<li><a href="#">营销体系</a></li>
+										<li><a href="#">康硒谷商城</a></li>
+										<li><a href="#">品牌连锁</a></li>
+										<li><a href="#">客户留言</a></li>
+										
+									</ul>
+									<div class="hide">
+										<img src="img/index24.jpg"  />
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="slider7">
+			<div class="slide"><img src="img/banner1.jpg"/></div>
+			<div class="slide"><img src="img/banner2.jpg"/></div>
+			<div class="slide"><img src="img/banner3.jpg"/></div>
+		</div>
+		<div class="content">
+			<div class="content_1">
+				<div class="English">
+					<p>PRODUCT CENTER</p>
+				</div>
+				<div class="product">
+					<h2>产品中心</h2>
+				</div>
+				<div class="pig">
+					<p>
+					   集种猪繁育、商品猪饲养、饲料研发生产、生物能源开发和现代生态农业示范园区等为一体的“猪－沼－果-菜”生态循环发展模式的科技型现代农业产业龙头企业。
+					</p>
+				</div>
+				<div class="ypig">
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide">
+					        	<img src="img/index3.jpg"  />
+					        </div>
+					        <div class="swiper-slide">
+					        	<img src="img/index2.jpg"  />
+					        </div>
+					        <div class="swiper-slide">
+					        	<img src="img/index1.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        	<img src="img/index6.jpg" />
+					        </div>
+					        <div class="swiper-slide">
+					        	<img src="img/huafei.jpg" />
+					        </div>
+					    </div>
+					</div>
+				</div>
+				
+			</div>	
+		</div>
+		<div class="news">
+			<div class="news_1">
+				<div class="news_2">
+					<p class="tc">NEWS CENTER</p>
+				</div>
+				<div class="news_3">
+					<h2 class="tc">新闻中心</h2>
+				</div>
+				<div class="duan">
+					<p>由阳晨集团创建的“龙头企业+规模养殖场”的生猪产业联盟经营模式，以其全新的经营理念、全新的合作方式，打造出当地“大农业”框架下的畜牧产业集群，在陕西省内发展联盟企业100余家，年生猪生产能力200万头。</p>
+				</div>
+				<div class="menu clearfix">
+					<div class="left">
+						<div id="tab">
+							 <ul>
+								  <li class="fli">
+								  	<div class="pic pic3" id="pic"></div>
+								  	<div class="now colorone" id="colorone">公司新闻</div>
+								  </li>
+								  <li class="normal">
+								  	<div class="pic pic4" id="pic1"></div>
+								  	<div class="now colortwo" id="colortwo">行业动态</div>
+								  </li>
+							 </ul>
+						</div>
+						<div id="tabCon">
+							 <div class="fdiv" id="fdiv">
+							 	<ul id="myul">
+							 		<li>阳晨牧业与长江证券喜接“姻缘”<span>[2017-07-01]</span>
+							 			<p class="block" name="pobj">
+							 				
+											6月29日，安康市人民政府与长江证券股份有限公司举行战略合作签约暨阳晨牧业IPO项目申报启动座谈会。市委副书记、代市长赵俊民，市政...
+							 			</p>
+							 		</li>
+							 		<li>卯足劲 尽全力 千方百计帮助贫困户增收致富<span>[2017-06-30]</span>
+							 			<p class="none" name="pobj">6月28日，由省供销合作总社主任杨效宏，省供销合作总社副主任、供销集团总经理郑忠堂，省供销集团中层以上领导组成的调研组，在安康市副...</p>
+							 		</li>
+							 		<li>阳晨集团首个生态养生园区揭牌成立<span>[2017-06-23]</span>
+							 			<p class="none" name="pobj">
+							 				6月20日上午八时，安康金秋生态农业有限公司成立挂牌仪式在牛蹄镇朝天河社区隆重举行。镇党政代表，镇属部门、学校、金融代表，朝天河社...
+							 			</p>
+							 		</li>
+							 		<li>中农办调研组深入安康市汉滨区阳晨现代农业科技有限公...<span>[2017-05-15]</span>
+							 			<p class="none" name="pobj">
+							 				   5月14日，中农办调研组刘红岩一行在陕西供销合作总社副主任、陕西供销企业集团总经理郑忠堂，安康市副市长鲁琦，安康市供销合作社...
+							 			</p>
+							 		</li>
+							 	</ul>
+							 </div>
+							 <div id="fdiv1">
+							 	<ul id="myul1">
+							 		<li>摆脱“猪周期”需要市场信息及时传导<span>[2016-04-05]</span>
+							 			<p class="block" name="pobj1">
+											  “猪周期”是我国农业供给体系粗放的一个缩影。理论上来讲，互联网+的发展是有利于市场信息及时传导的，但如何在农业实际中加以应用，...
+							 			</p>
+							 		</li>
+							 		<li>猪价涨迹明显 猪市“春天”是否已来临？<span>[2017-06-30]</span>
+							 			<p class="none" name="pobj1">  全国生猪均价整体延续稳中小幅上调走势，底部缓慢抬升。北方稳中上涨，多数地区稳定，其中吉林，辽宁，陕西，甘肃上涨0.2-0.4元...</p>
+							 		</li>
+							 		<li>国庆期间猪价先涨后跌，十月猪价或小幅上涨<span>[2017-06-23]</span>
+							 			<p class="none" name="pobj1">
+							 				据监测，国庆期间猪价先上扬后下跌，2015年10月08日全国外三元生猪均价为17.44元/公斤，较9月30日下跌0.03元/公斤。...
+							 			</p>
+							 		</li>
+							 		<li>8月份猪市冲高回落,持续震荡<span>[2017-05-15]</span>
+							 			<p class="none" name="pobj1">
+							 				   8月猪市冲高震荡 8月我国生猪和猪肉价格呈现出冲高回落震荡的行情。8月初南方生猪及猪肉价格在北方的带领下出现补涨行情。进入中下旬以...
+							 			</p>
+							 		</li>
+							 	</ul>
+							 </div>
+						</div>
+					</div>
+					<div class="right">
+						<img src="img/index4.jpg" />
+						<p>阳晨集团宣传视频</p>
+						<div class="play">
+							<i>
+								<img src="img/index20.png" />
+							</i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about">
+			<div class="about_1">
+				<div class="en_title">
+					<p>ABOUT YANGCHEN</p>
+				</div>	
+				<div class="zn_title">
+					<h2>关于阳晨</h2>
+				</div>
+				<div class="wd">
+					<p>
+						集团公司拥有阳晨牧业、阳晨生物饲料、秦阳晨原种猪、润物新能源沼气发电和阳晨现代农业科技等15个分、子公司，其中9家全资公司，2家控股公司，4家直属猪场。
+					</p>
+				</div>
+				<div class="down">
+					<ul class="clearfix">
+						<li><a href="#">
+							<img src="img/index11.jpg">
+							<div>
+								<h3>公司介绍</h3>
+								<p>
+	           					 安康阳晨集团公司是一家集种猪繁育、商品猪饲养、饲料研发生产、生物能源开发和现代生态农业示范...
+								</p>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<img src="img/index5.jpg" />
+							<div>
+								<h3>企业荣誉</h3>
+								<p>
+	           						在生猪科技研发中获得国家级奖项6项，省级奖项11项...
+								</p>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<img src="img/index9.jpg" />
+							<div>
+								<h3>企业文化</h3>
+								<p>
+	            					阳晨人将以建设国内领先、国际同步的科技型现代农业企业集团为目标，以生猪育种和种猪繁育为主体...
+								</p>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="ifoot">
+			<div class="ifoot_1">
+				<ul class="clearfix">
+					<li>
+						<p></p>
+						<a href="#">在陕西省内发展联盟企业100余家，年生猪生产能力200万头</a>
+					</li>
+					<li>
+						<p></p>
+						<a href="#">在生猪科技研发中获得国家级奖项6项，省级奖项11项</a>
+					</li>
+					<li>
+						<p></p>
+						<a href="#">在职员工850人，其中专业技术和管理人员210人</a>
+					</li>
+					<li>
+						<p></p>
+						<a href="#">9家全资公司，2家控股公司，4家直属猪场等15个分、子公司</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="footer_1">
+				<div class="sunshine clearfix">
+					<ul>
+						<li><a href="industry/industry.html">INDUSTRY<span>阳晨产业</span></a></li>
+						<li><a href="#">饲料加工</a></li>
+						<li><a href="#">畜牧养殖</a></li>
+						<li><a href="#">农业示范园</a></li>
+						<li><a href="#">能源开发</a></li>
+						<li><a href="#">休闲养老</a></li>
+						<li><a href="#">富硒食品</a></li>
+						<li><a href="#">生猪产业联盟</a></li>
+						<li><a href="#">阳晨职业技能培训学校</a></li>
+					</ul>
+					<ul>
+						<li><a href="product/product.html">PRODUCTS<span>产品中心</span></a></li>
+						<li><a href="#">阳晨种猪</a></li>
+						<li><a href="#">富硒饲料</a></li>
+						<li><a href="#">富硒猪肉</a></li>
+						<li><a href="#">富硒果蔬</a></li>
+						<li><a href="#">富硒特产</a></li>
+					</ul>
+					<ul>
+						<li><a href="cultrue/cultrue.html">CULTURE<span>企业文化</span></a></li>
+						<li><a href="#">宣传视频</a></li>
+						<li><a href="#">党建专题</a></li>
+						<li><a href="#">阳晨内刊</a></li>
+						<li><a href="#">公益活动</a></li>
+						<li><a href="#">员工活动</a></li>
+						<li><a href="#">员工风采</a></li>
+					</ul>
+					<ul>
+						<li><a href="resource/resource.html">RECRUITMENT<span>人力资源</span></a></li>
+						<li><a href="#">人才策略</a></li>
+						<li><a href="#">社会招聘</a></li>
+						<li><a href="#">校企合作</a></li>
+					</ul>
+					<ul>
+						<li><a href="fuwu/fuwu.html">SERVICE<span>服务与营销</span></a></li>
+						<li><a href="#">营销体系</a></li>
+						<li><a href="#">康硒谷商城</a></li>
+						<li><a href="#">品牌连锁</a></li>
+						<li><a href="#">客户留言</a></li>
+					</ul>
+					<div class="ma">
+						<img src="img/index13.png" />
+						<p>移动端二维码</p>
+						<a href="#" title="分享到新浪微博"></a> 
+				        <a href="#" title="分享到腾讯微博"></a> 
+				        <a href="#" title="分享到QQ好友"></a> 
+				        <a href="#" title="分享到微信"></a> 
+					</div>
+				</div>
+			</div>
+			<div class="footer_2">
+				<div class="wrap">
+					<div class="left">
+						<span> Copyright © 2016 阳晨集团 zgycmy.com Inc. All rights reserved. </span>
+						<a href="#">备案号:[ 陕ICP备13009635号-1 ]</a>
+					</div>
+					<div class="right">
+						<a href="#">捷瑞数字</a>
+						<a href="#"></a>
+						<a href="#">制作维护</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+<script type="text/javascript" src="js/tab.js" ></script>
+<script language="javascript">
+	window.onload = function() {
+		var mySwiper = new Swiper('.swiper-container',{
+		slideToClickedSlide:true,
+		slidesPerView: 3,
+  		spaceBetween: 20,
+		autoplay:2000
+		
+		})
+	}
+	
+
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.slider7').bxSlider({
+			slideWidth:1920,
+			infiniteloop:false,
+			hideControlOnEnd:true,
+			slideMargin:10
+		});
+	});
+</script>
+<script type="text/javascript">
+	var myul = document.getElementById("myul");
+	var pObj = myul.getElementsByTagName("li");
+	var divObj = document.getElementsByName("pobj");
+	for(var i=0; i<pObj.length; i++){
+		pObj[i].cll = i;
+		pObj[i].onmouseover = function(){
+			for(var j=0; j<divObj.length; j++){
+				divObj[j].className = "none";
+				pObj[j].className = "chu"
+			}			
+			this.className = "yin";
+			divObj[this.cll].className = "block";
+		}
+	}
+</script>
+<script type="text/javascript">
+	var myuls = document.getElementById("myul1");
+	var pObjs = myuls.getElementsByTagName("li");
+	var divObjs = document.getElementsByName("pobj1");
+	for(var i=0; i<pObjs.length; i++){
+		pObjs[i].cll = i;
+		pObjs[i].onmouseover = function(){
+			for(var j=0; j<divObjs.length; j++){
+				divObjs[j].className = "none";
+				pObjs[j].className = "chu"
+			}			
+			this.className = "yin";
+			divObjs[this.cll].className = "block";
+		}
+	}
+</script>
